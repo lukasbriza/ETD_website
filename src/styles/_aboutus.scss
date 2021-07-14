@@ -1,0 +1,194 @@
+.about_us{
+    overflow-y: auto;
+    overflow-x: hidden ;
+    min-height: 600px;
+    
+    height: calc(100vh - 90px);
+    
+    position: absolute;
+    top:90px;
+    left:0px;
+    .content{
+
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        
+        grid-template-areas: "picture aboutus";
+        
+        height: 100%;
+            .aboutUs_img{
+                grid-area: picture;
+                align-self: end;
+                
+                position: relative;
+    
+                img{
+                    position: absolute;
+                    
+                    height: 100%;
+                    left: 50%;
+                    transform:translateX(-50%);
+                    top: 0px;
+                }
+            }
+        
+        .aboutUs_wrapper{ 
+            grid-area: aboutus;
+            align-self: center;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+            width: 85%;
+
+            display: grid;
+
+            background: rgba(255, 255, 255, 0.836);
+            border-radius: 25px;
+            padding: 20px 0px;
+            
+            .aboutUs_header{
+                margin: 0px;
+                font-family: $font;
+                font-size: 40px;
+
+            }
+            #underliner6{
+                width: 125px;
+                height: 3px;
+                border-radius: 50%;
+                margin:0px auto;
+                background-color: black;
+            }
+            .aboutUs_text{
+                margin: 20px auto;
+                text-align: center;
+                font-family: $font;
+                font-size: 20px;
+                width: 80%;
+            }
+            .buttonWrapper{
+                height:100px;
+                width: 100%;
+                #button5{
+                    margin: 20px auto;
+                    text-decoration: none;
+                    div{
+                        margin: auto;
+                    }
+                }
+                #button5:visited{
+                    color: black;
+                }
+            }
+        }
+    }
+
+    /*Gradients*/
+    #gradient18{
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+    }
+    #gradient19{
+        position: absolute;
+        z-index: -1;
+        right: -50px;
+        bottom: 50px;
+    }
+    #gradient20{
+        position: absolute;
+        z-index: -1;
+        left: 60%;
+        transform: translateX(-50%);
+        top: -50px;
+    }
+    #gradient21{
+        position: absolute;
+        z-index: -1;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /////////////
+    @media (min-height: 900px){
+        .content{
+            .aboutUs_img{
+                height: 733.5px;
+            }
+        }
+    }
+    @media (min-width: 1301px){
+        .content{
+            .aboutUs_img{
+                padding-bottom: 0px;
+                height: 90%;
+            }
+        }
+    }
+    @media (max-width: 1300px){
+        .content{
+            .aboutUs_img{
+                height: 90%;
+            }
+            .aboutUs_wrapper{
+                .aboutUs_header{
+                    font-size: 35px;
+                }
+                .aboutUs_text{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:900px){
+        .content{
+            grid-template-columns: 1fr;
+            grid-template-areas: "";
+            .aboutUS_img{
+                position: absolute;
+                left: 50%;
+                transform:translateX(-50%);
+
+                z-index: 0;
+                
+                
+            }
+            .aboutUs_wrapper{
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform:translate(-50%, -50%);
+
+                
+
+                z-index: 5;
+                justify-self: center;
+                
+            }
+
+          /*Gradients*/
+            #gradient19{
+                right: -200px;
+                bottom: 0px;
+            }
+            #gradient20{
+                left: -30px;
+                top: 60%;
+            }
+            #gradient21{
+                display:none;
+            }
+        }
+    }
+    @media (max-width:600px){
+        .content{
+            #gradient19{
+                display:none;
+            }
+        }
+    }
+} 

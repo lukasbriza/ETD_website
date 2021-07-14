@@ -1,0 +1,221 @@
+@import "./base";
+
+/*MOBILE RESPONSIVE*/
+@media (max-width:770px){
+    /*Hide PC tags*/
+    .menu{
+        display: none;
+    }
+    /*Mobile styling*/
+    .menu_wrapper{
+        position: absolute;
+        display: flex;
+        
+        width: 100%;
+        height: $menuHeight;
+        background-color: white;
+        z-index:100;
+
+        .logo{
+            position:relative;
+            width:auto;
+            align-self: center;
+            height: $menuHeight;
+            z-index: 50;
+            cursor: pointer;
+            @include centeringBasic;
+        }
+
+        .hamburgerMenu{
+            position:absolute;
+            right: 25px;
+            top: 30px;
+
+            .toggleMenu{
+                display: block;
+                position: absolute;
+                right: 0%;
+                top: 0%;
+                user-select: none;
+                z-index: 1;
+
+                input{
+                    display: block;
+                    width: 40px;
+                    height: 32px;
+                    position: absolute;
+
+                    top: -7px;
+                    right: -5px;
+                    cursor: pointer;
+
+                    opacity: 0;//hiding
+                    z-index: 2;
+
+                    -webkit-touch-callout: none;
+                }
+
+                span{
+                    display:block;
+                    width: 33px;
+                    height: 4px;
+                    margin-bottom: 5px;
+                    position: relative;
+                    background:black;
+                    border-radius: 3px;
+                    z-index: 1;
+
+                    transform-origin: 4px 0px;
+                    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                                opacity 0.55s ease;
+                }
+                span:first-child{
+                    transform-origin: 0% 0%;
+                }
+                span:nth-last-child(2){
+                transform-origin: 0% 100%;
+                }
+
+                /*Transform slices of hamburger*/
+                input:checked ~ span{ //otočení všech
+                    opacity:1;
+                    transform: rotate(45deg) translate(-2px, -1px);
+                    background: black;
+                }
+                input:checked ~ span:nth-last-child(3){ //schování prostředního
+                    opacity: 0;
+                    transform: rotate(0deg) scale(0.2, 0.2);
+                }
+                input:checked ~ span:nth-last-child(2){ //otočení posledního
+                    transform: rotate(-45deg) translate(0, -1px);
+                }
+                /*-------------------------------*/
+                
+                ul{
+                    position: absolute;
+                    display:grid;
+                    justify-content:center;
+                    align-items:center;
+                    align-content: center;
+                    grid-template-rows:10% 10% 10% 10%;
+                    
+                    width: 100vw;
+                    height: 100vh;
+                    top:-30px;
+                    right: -100%;
+                    margin: 0px;
+
+                    background: white;
+                    list-style-type: none;
+                    -webkit-font-smoothing: antialiased;
+
+                    transform-origin: 0% 0%;
+                    transform: translate(100%, 0%);
+                    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                    
+
+                    a{
+                        display: grid;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: black;                        
+                        transition: color 0.3s ease;
+
+                        li{
+                            padding: 0px; 
+                            font-family: $font;
+                            font-weight: $regular;
+                            font-size: 25px;
+                        }
+                    }
+                    a:hover{
+                        color:tomato;
+                    }
+                }
+                input:checked ~ ul{
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+/*PC RESPONSIVE*/
+@media (min-width:771px){
+    /*Hide mobile tags*/
+    .hamburgerMenu{
+        display: none;
+    }
+    /*PC styling*/
+    .menu_wrapper{
+        position: absolute;
+        display: flex;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        background-color: white;
+        z-index:100;
+    
+        .logo{
+            position:relative;
+            width:auto;
+            height: $menuHeight;
+            margin-left: 40px;
+            cursor: pointer;
+
+            transition-property: height;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+        }
+        .logo:hover{
+            height:100px;
+        }
+        .menu{
+            display:flex;
+            position: relative;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            
+
+            width: 100%;
+            margin-right: 30px;
+
+            a{
+                text-decoration: none;
+                font-family: $font;
+                font-weight: $medium;
+                font-size: 19px;
+                margin: 5px 15px 0px 15px;
+                cursor: pointer;
+                color: rgb(82, 82, 82);             
+            }
+            a:hover{
+                color:$textColor;
+            }
+            a:after{
+                display:block;
+                background:$textColor;
+                content: "";
+                margin-left: auto;
+                margin-right: auto;
+
+                border-radius: 28%;
+                width: 0%;
+                height: 5px;
+                bottom: 25px;
+                left: 50%;
+
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
+            }
+            a:hover:after{
+                width: 80%;
+                left: 0%;
+                transition: width 0.65s ease 0.1s, left 0.65s ease 0.1s;
+            }
+        }
+    }
+}
+

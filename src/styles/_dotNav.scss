@@ -1,0 +1,59 @@
+@import "./base";
+
+.dotWrapper{
+    position: fixed;
+    top: 55%;
+    right: 25px;
+    transform:translateY(-50%);
+    z-index: 99;
+    //outline: solid 1px black;
+
+    .dot{
+
+        position: relative;
+        border: solid 3px black;
+        width: $dotSize;
+        height: $dotSize;
+        border-radius: 50%;
+        margin: 7px 0px;
+        cursor: pointer;
+
+        
+        div{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            background-color: black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px; 
+
+            transition: all 0.4s ease-in;
+        }
+
+        div:hover{
+            background-color: rgb(59, 59, 59);
+        }
+        
+    }
+}
+
+@media (max-width: 771px){
+    .dotWrapper{
+       display: none;
+    }
+    #radio-btn-lp{
+        display: initial;
+    }
+}
+@media (min-width: 772px){
+    .dotWrapper{
+        display:initial;
+    }
+    #radio-btn-lp{
+        display: none;
+    }
+}

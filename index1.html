@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./src/styles/style.css">
+    
+    <title>EasyToDance</title>
+</head>
+<div data-barba="wrapper" class="page-wrapper">
+    <!--Unhanging content -->
+    
+    <!-- --------------------MENU-------------------- -->
+    <div class="menu_wrapper" id="menu_wrapper">
+        <!-- logo -->
+        <img src="src/pictures/Logo-ETD.png" alt="logo" class="logo">
+        
+        <!-- nav PC -->
+        <nav class="menu" role="navigation">
+            <a class="menuOption" id="option1" href="/index1.html">Hlavní stránka</a>
+            <a class="menuOption" id="option2" href="/references.html">Reference</a>
+            <a class="menuOption" id="option3" href="/aboutus.html">O mě</a>
+            <a class="menuOption" id="option4" href="/contact.html">Kontakt</a>
+        </nav>
+        <div class="dotWrapper">
+            <a href="/index1.html"><div class="dot"><div id="1"></div></div></a>
+            <a href="/index2.html"><div class="dot"><div id="2"></div></div></a>
+            <a href="/index3.html"><div class="dot"><div id="3"></div></div></a>
+        </div>
+        <!-- nav MOBILE -->
+        <nav role="navigation" class="hamburgerMenu mob">
+            <div class="toggleMenu">
+                <input type="checkbox" />
+                
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul class="hamburgerMobOpt">
+                    <a id="1hmb" href="/index1.html"><li>Hlavní stránka</li></a>
+                    <a id="2hmb" href="/references.html"><li>Reference</li></a>
+                    <a id="3hmb" href="/aboutus.html"><li>O mě</li></a>
+                    <a id="4hmb" href="/contact.html"><li>Kontakt</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- nav Footer Button -->
+    <div class="navMobile_wrapper">
+        <a id="up">
+            <div id="line1" class="line"></div>
+            <div id="line2" class="line"></div>
+        </a>
+        <a id="down">
+            <div id="line3" class="line"></div>
+            <div id="line4" class="line"></div>
+        </a>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <main data-barba="container" class="index1" data-barba-namespace="hero" >
+        <!-- Changing content -->
+        
+            <!-- LP content -->
+            <section id="lp_content_wrapper">
+                <div id="lp_text_wrapper">
+                    <h1 id="banner">
+                        Tak jednoduché,<br> že to zvládne každý!
+                    </h1>
+                    <div id="underliner1"></div>
+                    <p id="banner_content">
+                        Vyzkoušejte, jaké to je tančit s profesionálem.<br>
+                        Staňte se hvězdou parketu!
+                    </p>
+                    <div class="button" id="button1">
+                        <p>ZAČÍT</p>
+                        <div class="button_filler"></div>
+                    </div>
+                </div>
+                <div id="img_wrapper">
+                    <div class="gradient1" id="gradient1"></div>
+                    <img src="./src/pictures/Dancer.png" alt="Dancer" id="imgDancer">
+                </div>
+                <!-- Radio nav -->
+                <div id="radio-btn-lp">
+                    <div id="radiol1">
+                        <div name="radio" id="radio1"></div>
+                    </div>
+                        
+                    <div id="radiol2">
+                        <div name="radio" id="radio2"></div>
+                    </div>
+                </div>
+            </section>
+        <!--------------->
+        <!-- Gradients -->
+            <div class="gradient2" id="gradient2"></div> 
+            <div class="gradient3" id="gradient3"></div>
+            <div class="gradient4" id="gradient4"></div>
+        <!-- Javascript -->
+        <script type="module" src="./src/index.js" ></script>
+    </main>
+</div>
+</html>

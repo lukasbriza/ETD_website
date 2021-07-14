@@ -1,0 +1,413 @@
+@mixin input{
+    outline: none;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+    padding-left: 5px;
+}
+
+.contact{
+    overflow-y: auto;
+    height: calc(100vh - 90px);
+    
+    position: absolute;
+    left: 0;
+    top: 90px;
+    
+
+    .contentAU{
+        overflow-x: hidden;
+        min-height:667px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        
+        display:grid;
+        justify-items: center;
+        align-content: center;
+        grid-template-columns: 1fr;
+
+        .formWrapper{
+            max-width: 1100px;
+            width:80%;
+            margin: 20px 0px;
+
+            //min-height: 500px;
+            
+            border-radius: 30px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border: black solid 1px;
+            background: white;
+            
+            display: grid;
+            grid-template-columns: 60% 1fr;
+            grid-template-areas: "form info";
+            form{
+                grid-area: form;
+                display:grid;
+                grid-template: none;
+                justify-content: center;
+                justify-items: center;
+
+                .introduction{
+                    text-align: center;
+                    margin-top: 20px;
+                    font-family: $font;
+                    font-size: 22px;
+                    font-weight: 700;
+
+
+                    .form_underliner{
+                        width: 115px;
+                        height: 3px;
+                        border-radius: 50%;
+                        margin:0px auto;
+                        background-color: black;
+                    }
+                }
+                .names_wrapper{
+                    display: grid;
+                    width: 100%;
+                    grid-template-areas: "name1L"
+                                         "input1"
+                                         "name2L"
+                                         "input2";
+                    
+                    #fnameL{
+                        grid-area: name1L;
+                        font-family: $font;
+                        width: 100%;
+
+                        margin-top:10px;
+                    }
+                    #fname{
+                        grid-area: input1;
+                        width: 100%;
+
+                        margin-bottom:10px;
+                        @include input;
+                    }
+                    #lnameL{
+                        grid-area: name2L;
+                        font-family: $font;
+                        width: 100%;
+
+                        margin-top:10px;
+                    }
+                    #lname{
+                        grid-area: input2;
+                        width: 100%;
+
+                        margin-bottom:10px;
+                        @include input;
+                    }
+                    
+                }
+                .email_wrapper{
+                    display:grid;
+                    width: 100%;
+
+                    margin: 10px 0px;
+                    #emailL{
+                        font-family: $font;
+                        width: 100%;
+                    }
+                    #email{
+                        width: 100%;
+                        @include input;
+                    }
+                }
+                .message_wrapper{
+                    display:grid;
+                    width: 100%;
+
+                    margin: 10px 0px;
+                    margin-bottom: 20px;
+                    #messageL{
+                        font-family: $font;
+                        width: 100%;
+                    }
+                    #message{
+                        width: 100%;
+                        @include input;
+                        height: 100px;
+                        resize: none;
+                        padding-top: 5px;
+                    }
+                }
+                .button_wrapper{
+                    height: 100px;
+                    width: 100%;
+
+                    #button6{
+                        left: 50%;
+                        top: 40%;
+                        transform:translate(-50%,-50%);
+                    }
+                }
+
+
+            }
+            .informations_wrapper{
+                position: relative;
+                grid-area: info;
+
+                .informations{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform:translate(-50%,-50%);
+
+                    width: 95%;
+                    
+                    display: grid;
+                    
+
+                    .name{
+                        font-family: $font;
+                        font-size: 18px;
+                        margin-left: 45px;
+                    }
+                    .ico{
+                        font-family: $font;
+                        margin-left: 45px;
+                    }
+                    .home{
+                        
+                        margin: 5px 0px;
+                        margin-top:20px;
+                        display: flex;
+                        .homeIco{
+                            width: 20px;
+                            margin-left: 10px;
+                        }
+                        .homeText{
+                            font-family: $font;
+                            margin:0px;
+                            margin-left: 15px;
+                        }
+                    }
+                    .phone{
+                        margin: 5px 0px;
+                        display: flex;
+                        .phoneIco{
+                            width: 20px;
+                            margin-left: 10px;
+                        }
+                        .phoneText{
+                            font-family: $font;
+                            margin:0px;
+                            margin-left: 15px;
+                        }
+                    }
+                    .mail{
+                        margin: 5px 0px;
+                        display: flex;
+                        .mailIco{
+                            width: 20px;
+                            margin-left: 10px;
+                        }
+                        .mailText{
+                            font-family: $font;
+                            margin:0px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+                .line{
+                    position: absolute;
+                    height: 80%;
+                    width: 2px;
+                    background: rgba(0, 0, 0, 0.603);
+                    border-radius: 30%;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    /*Gradients*/
+    #gradient22{
+        position:absolute;
+        z-index: -1;
+        right: -50px;
+        top: -30px;
+    }
+    #gradient23{
+        position:absolute;
+        z-index: -1;
+        left: -30px;
+        top: 50%;
+        transform:translateY(-50%);
+    }
+    #gradient24{
+        position:absolute;
+        z-index: -1;
+        bottom:10px;
+    }
+    #gradient25{
+        position:absolute;
+        z-index: -1;
+        left: 190px;
+    }
+
+    @media (max-width: 750px){
+        overflow-y: auto;
+        .contentAU{
+            min-height: 800px;
+            height:100%;
+            .formWrapper{
+                grid-template-columns: none;
+                grid-template-rows: none;
+                grid-template-areas: none;
+
+                grid-template-rows: 1fr 180px;
+                grid-template-areas: "form"
+                                     "info";
+
+
+                form{
+                    grid-area: form;
+                    width: 100%;
+                    
+
+                    display: grid;
+                    justify-content: center;
+                    
+
+                    .introduction{
+                        width:100%;
+                        text-align: center;
+                        margin-top: 20px;
+                        font-family: $font;
+                        font-size: 22px;
+                        font-weight: 700;
+
+                        .form_underliner{
+                            width: 115px;
+                            height: 3px;
+                            border-radius: 50%;
+                            margin:0px auto;
+                            background-color: black;
+                        }
+                    }
+
+                    .names_wrapper{
+                        display: grid;
+                        width: 100%;
+                        grid-template-areas: "name1L"
+                                             "input1"
+                                             "name2L"
+                                             "input2";
+                        
+                        #fnameL{
+                            grid-area: name1L;
+                            font-family: $font;
+                            width: 100%;
+
+                            margin-top:10px;
+                        }
+                        #fname{
+                            grid-area: input1;
+                            width: 100%;
+
+                            margin-bottom:10px;
+                            @include input;
+                        }
+                        #lnameL{
+                            grid-area: name2L;
+                            font-family: $font;
+                            width: 100%;
+
+                            margin-top:10px;
+                        }
+                        #lname{
+                            grid-area: input2;
+                            width: 100%;
+
+                            margin-bottom:10px;
+                            @include input;
+                        }
+                        
+                    }
+                    .email_wrapper{
+                        display:grid;
+                        width: 100%;
+
+                        margin: 10px 0px;
+                        #emailL{
+                            font-family: $font;
+                            width: 100%;
+                        }
+                        #email{
+                            width: 100%;
+                            @include input;
+                        }
+                    }
+                    .message_wrapper{
+                        display:grid;
+                        width: 100%;
+
+                        margin: 10px 0px;
+                        margin-bottom: 20px;
+                        #messageL{
+                            font-family: $font;
+                            width: 100%;
+                        }
+                        #message{
+                            width: 100%;
+                            @include input;
+                            height: 100px;
+                            resize: none;
+                            padding-top: 5px;
+                        }
+                    }
+                    .button_wrapper{
+                        height: 90px;
+                        width: 100%;
+
+                        #button6{
+                            left: 50%;
+                            top: 50%;
+                            transform:translate(-50%,-50%);
+                        }
+                    }
+                }
+                .informations_wrapper{
+                    grid-area: info;
+
+                    .line{
+                        width: 80%;
+                        height: 2px;
+                        left: 50%;
+                        top: 0px;
+                        transform:translate(-50%,0%);
+                    }
+                    .informations{
+                        justify-content: center;
+                        .name,.ico{
+                            text-align: center;
+                        }
+                        .name,.ico,.home,.phone,.mail{
+                            margin: 0px;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*gradients*/
+        #gradient25{
+            display: none;
+        }
+        #gradient24{
+            display: none;
+        }
+    }
+}

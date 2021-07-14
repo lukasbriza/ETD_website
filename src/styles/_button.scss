@@ -1,0 +1,57 @@
+@import "./base";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
+
+.button{
+    z-index: 2;
+    overflow: hidden;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    user-select: none;
+    font-family: $font;
+    border: 3px solid black;
+    background: transparent;
+    text-align: center;
+    height: 56px;
+    width: 196px;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: $bold;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+}
+.button:hover{
+    border-color:rgb(46, 46, 46);
+    color: white;
+    box-shadow: 0px 4px 25px 6px rgb(99, 99, 99);
+    transition-property: none;
+    border-width: 0px 5px 6px 0px;
+}
+.button::before{ /* vložím fiktivní element do class button s označením before... lze vložit jen jeden element tímto způsobem */
+    z-index: -1;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-width: 0px 0px 0px 0px;
+    background-color: rgb(92, 92, 92);
+    transition: 0.2s all ease-in;
+    content: "";
+    opacity: 0;
+}
+.button:hover::before{ /*edituji dříve vložený fiktivní element pří přejetím myší > hover */
+    transition: 0.2s all ease-in;
+    width: 350px;
+    height: 250px;
+    opacity: 1;
+}
+.button:active{
+    border-width: 0px 0px 0px 0px;
+    border: 3px solid rgb(41, 41, 41);
+    box-shadow: 0px 0px 25px 10px rgb(230, 230, 230);
+
+}

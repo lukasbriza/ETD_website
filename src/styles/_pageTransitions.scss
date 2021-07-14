@@ -1,0 +1,151 @@
+@import "./base";
+
+/*UP ANIMATION*/
+.UP-leave{transform: translateY(0%);}
+.UP-leave-active {transition: transform 1s ease-in-out;}
+.UP-leave-to{transform: translateY(100%);}
+
+
+.UP-enter{transform: translateY(-100%);}
+.UP-enter-active {transition: transform 1s ease-in-out;}
+.UP-enter-to{
+    position:absolute;
+    top: 90px;
+    left: 0px;
+    transform: translateY(0%);
+}
+/*DOWN ANIMATION*/
+
+.DOWN-leave{transform: translateY(0%);}
+.DOWN-leave-active {transition: transform 1s ease-in-out;}
+.DOWN-leave-to{transform: translateY(-100%);}
+
+.DOWN-enter{transform: translateY(100%);}
+.DOWN-enter-active {transition: transform 1s ease-in-out;}
+.DOWN-enter-to{
+    position:absolute;
+    top: 90px;
+    left: 0px;
+    transform: translateY(0%);
+}
+
+/*MARK ON ANIMATION*/
+.markON-leave .transition{
+    display: initial !important;
+    z-index: 300 !important;
+    clip-path: circle(0%) !important;
+    background-color: $peripheryColor !important;
+}
+.markON-leave-active{ 
+    transition: all 1.5s ease-in-out !important;
+    .transition{
+        transition-property: all !important;
+        transition-duration: 1.5s !important;
+        transition-timing-function: ease-in-out !important;
+    }
+}
+
+.markON-leave-to>.transition{
+    clip-path: circle(100%) !important;
+    z-index: 300 !important;
+    background-color: $peripheryColor !important;
+}
+.markON-enter{background-color: $peripheryColor;}
+.markON-enter-to{background-color: $peripheryColor;}
+
+/* MARK OFF ANIMATION */
+.markOFF-leave{
+    clip-path: circle(100%);
+    
+}
+.markOFF-leave-active{
+    transition: all 1.5s ease-in-out;
+}
+.markOFF-leave-to{
+    clip-path: circle(0%);
+}
+.markOFF-enter{
+    opacity: 0;
+}
+.markOFF-enter-active{
+    transition: opacity 1s ease-in;
+}
+.markOFF-enter-to{
+    opacity: 1;
+}
+
+/*FORM1 ON ANIMATION*/
+.form1LeftON-enter{transform:translateX(-100%) !important;}
+.form1LeftON-enter-active{transition: transform 1.3s ease-out !important;}
+.form1LeftON-enter-to{transform:translateX(0%) !important;}
+
+/*FORM1 OFF ANIMATION*/
+.form1LeftOFF-leave{transform:translateX(0%) !important;}
+.form1LeftOFF-leave-active{transition: transform 1.3s ease-out !important;}
+.form1LeftOFF-leave-to{transform:translateX(-100%) !important;}
+
+/*FORM2 ON ANIMATION*/
+.form2RightON-enter{transform:translateX(100%) !important;}
+.form2RightON-enter-active{transition: transform 1.3s ease-out !important;}
+.form2RightON-enter-to{transform:translateX(0%) !important;}
+
+/*FORM2 OFF ANIMATION*/
+.form2RightOFF-leave{transform:translateX(0%) !important;}
+.form2RightOFF-leave-active{transition: transform 1.3s ease-out !important;}
+.form2RightOFF-leave-to{transform:translateX(100%) !important;}
+
+
+
+/*RMAINMENU ANIMATION*/
+.Rmainmenu-leave{transform:translateX(0%) !important;}
+.Rmainmenu-leave-active{transition: transform 1.3s ease-out !important;}
+.Rmainmenu-leave-to{transform:translateX(100%) !important;}
+
+.Rmainmenu-enter{transform:translateX(-100%) !important;}
+.Rmainmenu-enter-active{transition: transform 1.3s ease-out !important;}
+.Rmainmenu-enter-to{transform:translateX(0%) !important;}
+
+/*RREFERENCES ANIMATION*/
+.RReferences-leave{transform:translateX(0%) !important;}
+.RReferences-leave-active{transition: transform 1.3s ease-out !important;}
+.RReferences-leave-to{transform:translateX(100%) !important;}
+
+.RReferences-enter{transform:translateX(-100%) !important;}
+.RReferences-enter-active{transition: transform 1.3s ease-out !important;}
+.RReferences-enter-to{transform:translateX(0%) !important;}
+
+/*RABOUTUS ANIMATION*/
+.RAboutus-leave{transform:translateX(0%) !important;}
+.RAboutus-leave-active{transition: transform 1.3s ease-out !important;}
+.RAboutus-leave-to{transform:translateX(100%) !important;}
+
+.RAboutus-enter{transform:translateX(-100%) !important;}
+.RAboutus-enter-active{transition: transform 1.3s ease-out !important;}
+.RAboutus-enter-to{transform:translateX(0%) !important;}
+
+/*LREFERENCES ANIMATION*/
+.LReferences-leave{transform:translateX(0%) !important;}
+.LReferences-leave-active{transition: transform 1.3s ease-out !important;}
+.LReferences-leave-to{transform:translateX(-100%) !important;}
+
+.LReferences-enter{transform:translateX(+100%) !important;}
+.LReferences-enter-active{transition: transform 1.3s ease-out !important;}
+.LReferences-enter-to{transform:translateX(0%) !important;}
+
+/*LABOUTUS ANIMATION*/
+.LAboutus-leave{transform:translateX(0%) !important;}
+.LAboutus-leave-active{transition: transform 1.3s ease-out !important;}
+.LAboutus-leave-to{transform:translateX(-100%) !important;}
+
+.LAboutus-enter{transform:translateX(+100%) !important;}
+.LAboutus-enter-active{transition: transform 1.3s ease-out !important;}
+.LAboutus-enter-to{transform:translateX(0%) !important;}
+
+/*LCONTACT ANIMATION*/
+.Lcontact-leave{transform:translateX(0%) !important;}
+.Lcontact-leave-active{transition: transform 1.3s ease-out !important;}
+.Lcontact-leave-to{transform:translateX(-100%) !important;}
+
+.Lcontact-enter{transform:translateX(+100%) !important;}
+.Lcontact-enter-active{transition: transform 1.3s ease-out !important;}
+.Lcontact-enter-to{transform:translateX(0%) !important;}

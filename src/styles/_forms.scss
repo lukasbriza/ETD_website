@@ -1,0 +1,230 @@
+
+.form{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    min-width: 100vw;
+    height: 100vh;
+
+    z-index: 10000;
+
+    .content{
+        width: 100vw;
+        height: 100vh;
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        
+        #formBackArrow1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(-180deg);
+            path{
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                
+            }
+        }
+
+        #formBackArrow2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            right: 10px;
+            path{
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                
+            }
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            filter: none;
+
+            width: 90vw;
+            height: 80vh;
+            z-index: 5;
+
+            box-shadow: rgba(0, 0, 0, 0.39) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 50px;
+            border: 1px solid black;
+            
+
+            .picture{
+                position: relative;
+                width: 100%;
+                border-radius: 50px 0px 0px 50px;
+                background:#c7c7c7;
+
+                img{
+                    position: absolute;
+                    filter: grayscale(100%) blur(5px) opacity(0.9);
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 400px;
+                    z-index: 4;
+
+                    transition: all 0.7s ease-in-out;
+                    cursor: pointer;
+                }
+                   /* img:hover{
+                        filter: blur(0px) grayscale(0%) opacity(0.9);
+                        filter:none; //transition works with that only
+                    }*/
+                .shadow{
+                    width: 380px;
+                    height: 30px;
+                    position: absolute;
+                    top: 82%;
+                    left: 53%;
+                    transform: translate(-50%,-50%);
+                    background: rgba(0, 0, 0, 0.548);
+                    border-radius: 50%;
+                    filter: blur(5px);
+                    z-index: 3;
+                }
+            }
+            .form_wrapper{
+                width: 100%;
+                height: 100%;
+                border-radius: 0px 50px 50px 0px;
+                    @media (max-width:920px){
+                        border-radius: 50px;
+                    }
+                background:white;
+                display:grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                justify-items: center;
+
+                align-content: center;
+
+                form{
+                    width:70%;
+
+                    .introduction{
+                        display:block;
+                        text-align: center;
+                        font: $font;
+                        font-size: 38px;
+                        font-weight: 600;
+
+                        .form_underliner{
+                            width: 50%;
+                            height: 3px;
+                            background: black;
+                            margin: 5px auto;
+                            border-radius: 50%;
+                        }
+                    }
+                    
+                    div{
+                    margin: 15px 0px;
+                    width: 100%;
+                    
+
+                        label{
+                            font-family: $font;
+                            font-size: 20px;
+                            
+                        }
+                        input{
+                            border-radius: 5px;
+                            border: 1px solid black;
+                            outline: none;
+                            height: 30px;
+                            width: 100%;
+                            padding-left: 10px;
+                        }
+
+                        #message{
+                            resize: none;
+                            width: 99%;
+                            height: 100px;
+                            outline: none;
+                            padding: 10px;
+                            border-radius: 5px;
+                        }
+                    }
+                    #button5{
+                        
+                        margin: 10px auto;
+                        width: 200px;
+                        display:grid;
+                        justify-self: center;
+                        align-content: center;
+                        align-items: center;
+                        p{
+                            position: absolute;
+                            margin: 0px;
+                            top: 50%;
+                            left: 50%;
+                            transform:translate(-50%,-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:920px){
+    .pc{
+        display:none;
+    }
+}
+
+/*background*/
+.left{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+
+    overflow: hidden;
+    background: rgb(110, 110, 110);
+
+    //filter: blur(5px);
+}
+
+.right{
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+
+    border-bottom: 100vh solid rgb(216, 216, 216);
+    border-top: 0px solid transparent;
+    border-left: 20vw solid transparent;
+    border-right: 40vw solid rgb(216, 216, 216);
+
+    //filter: blur(5px);
+}
+
+////////////////////////////////////////////////////////////////
+@keyframes animationBlur{
+    from {
+        filter: grayscale(100%) blur(5px) opacity(0.9) !important;
+    }
+    to{
+        filter: blur(0px) grayscale(0%) opacity(0.9) !important;
+        filter:none;
+    }
+}
+
+.animationClass{
+    animation-name: animationBlur !important;
+    animation-duration:0.7s !important;
+    animation-timing-function: ease-in !important;
+    animation-fill-mode: forwards !important;
+}

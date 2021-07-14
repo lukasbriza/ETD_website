@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./src/styles/style.css">
+    
+    <title>EasyToDance</title>
+</head>
+<div data-barba="wrapper" class="page-wrapper">
+    <!--Unhanging content -->
+    
+    <!-- --------------------MENU-------------------- -->
+    <div class="menu_wrapper" id="menu_wrapper">
+        <!-- logo -->
+        <img src="src/pictures/Logo-ETD.png" alt="logo" class="logo">
+        
+        <!-- nav PC -->
+        <nav class="menu" role="navigation">
+            <a class="menuOption" id="option1" href="/index1.html">Hlavní stránka</a>
+            <a class="menuOption" id="option2" href="/references.html">Reference</a>
+            <a class="menuOption" id="option3" href="/aboutus.html">O mě</a>
+            <a class="menuOption" id="option4" href="/contact.html">Kontakt</a>
+        </nav>
+        <div class="dotWrapper">
+            <a href="/index1.html"><div class="dot"><div id="1"></div></div></a>
+            <a href="/index2.html"><div class="dot"><div id="2"></div></div></a>
+            <a href="/index3.html"><div class="dot"><div id="3"></div></div></a>
+        </div>
+        <!-- nav MOBILE -->
+        <nav role="navigation" class="hamburgerMenu mob">
+            <div class="toggleMenu">
+                <input type="checkbox" />
+                
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul class="hamburgerMobOpt">
+                    <a id="1hmb" href="/index1.html"><li>Hlavní stránka</li></a>
+                    <a id="2hmb" href="/references.html"><li>Reference</li></a>
+                    <a id="3hmb" href="/aboutus.html"><li>O mě</li></a>
+                    <a id="4hmb" href="/contact.html"><li>Kontakt</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- nav Footer Button -->
+    <div class="navMobile_wrapper">
+        <a id="up">
+            <div id="line1" class="line"></div>
+            <div id="line2" class="line"></div>
+        </a>
+        <a id="down">
+            <div id="line3" class="line"></div>
+            <div id="line4" class="line"></div>
+        </a>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <main data-barba="container" class="references" data-barba-namespace="references" >
+    <!-- Changing content -->    
+        <!-- RF content -->
+        <div class="content">
+            <section class="videoReferences">
+                <div class="iframe">
+                    <iframe src="https://www.youtube.com/embed/_ZPGSA85sbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="iframe">
+                    <iframe src="https://www.youtube.com/embed/8pTFIopZjGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="writeReferences">
+                <div class="referencesHeader">
+                    <h1>Kde se o nás psalo?</h1>
+                    <div id="underliner5"></div>
+                </div>
+                <div class="referenceWrapper">
+                    <a href="https://firstclass.cz/" target="_blank"><img src="./src/pictures/Logo-FC.png" alt="First Class" id="firsClass"></a>
+                    <a href="https://firstclass.cz/" target="_blank"><img src="./src/pictures/Logo-BL.png" alt="Business Leaders" id="businessLeaders"></a>
+                </div>
+            </section>
+        </div>
+         <!-- Gradients -->
+         
+        <div class="gradient1" id="gradient15"></div>
+        <div class="gradient2" id="gradient16"></div> 
+        <div class="gradient3" id="gradient17"></div>
+        <div class="gradient4" id="gradient18"></div>
+         
+        <!-- Javascript -->
+        <script type="module" src="./src/index.js" ></script>
+    </main>
+</div>
+</html>

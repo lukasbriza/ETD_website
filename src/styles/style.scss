@@ -1,0 +1,104 @@
+@import "./base";
+@import "./menu";
+@import "./navMobile";
+@import "./dotNav";
+@import "./button";
+@import "./gradients";
+@import "./cardAnimation";
+@import "./index1";
+@import "./index2";
+@import "./index3";
+@import "./marker";
+@import "./pageTransitions";
+@import "./forms";
+@import "./references";
+@import "./contact";
+@import "./aboutus";
+
+@keyframes opacityDown{
+    from { opacity:1}
+    to { opacity:0}
+}
+
+@keyframes opacityUp{
+    from { opacity:0}
+    to { opacity:1}
+}
+@keyframes iconOn{
+    from { 
+        opacity: 0;
+        margin-bottom: 20px;
+    }
+    to { 
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+@keyframes iconOn2{
+    from { 
+        opacity: 0;
+        margin-bottom: 0px;
+    }
+    to { 
+        opacity: 1;
+        margin-bottom: -20px;
+    }
+}
+
+.iconOn{
+    animation-name: iconOn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+.iconOn2{
+    animation-name: iconOn2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.opacityDown{
+    animation-name: opacityDown;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+.opacityUp{
+    animation-name: opacityUp;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+/*//////////////////////////////////////////////////////*/
+html{
+    @include defaultBoxing;
+    @include basicSizing;
+    background: rgb(216,216,216);
+    overflow-x: hidden;
+    overflow-y: hidden; //nové
+
+}
+body{
+    @include defaultBoxing;
+}
+main{
+    @include basicSizing;
+    
+}
+.page-wrapper{
+    @include defaultBoxing;
+    @include basicSizing;
+    overflow-x: hidden !important; //hide menu element generaly
+    overflow-y: hidden;
+    position: relative;
+    
+}
+/*/////////////////////////////////////////////////////*/
+
+
+        
+
+  
+
+    

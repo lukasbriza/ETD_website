@@ -1,0 +1,77 @@
+@import "./base";
+
+//transition setting
+$duration: 0.5s;
+$timing: ease-in;
+
+.navMobile_wrapper{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    right: 25px;
+    bottom: 25px;
+    border-radius:50%;
+    background-color: rgba(255, 254, 254, 0.568);
+    z-index: 10;
+
+    .line{
+        @include defaultBoxing;
+        width: 20px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: black;
+    }
+
+    #up{
+        max-width: 60px;
+        height:30px;
+        cursor: pointer;
+
+        #line1{
+            display: none;
+            position: absolute;
+            transform: rotate(-45deg);
+            top: 12px;
+            left: 14px;
+        }
+        #line2{
+            display: none;
+            position: absolute;
+            transform: rotate(45deg);
+            top: 12px;
+            right: 14px;
+        }
+    }
+    #down{
+        max-width: 60px;
+        height:30px;
+        cursor: pointer;
+
+        #line3{
+            display: none;
+            position: absolute;
+            transform: rotate(45deg);
+            bottom:12px;
+            left: 14px;
+        }
+        #line4{
+            display: none;
+            position: absolute;
+            transform: rotate(-45deg);
+            bottom:12px;
+            right: 14px;
+        }
+    }
+}
+
+#up:hover{
+    #line1, #line2{
+        background-color: rgb(51, 51, 51);
+    }
+}
+#down:hover{
+    #line3, #line4{
+        background-color: rgb(51, 51, 51);
+    }
+}
+
