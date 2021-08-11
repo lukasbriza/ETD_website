@@ -1,7 +1,7 @@
 Project - ETD
 -------------  
 
-Used technology: HTML, CSS, Javascript  
+Used languages: HTML, CSS, Javascript  
 Used frameworks: Barba.js, Babel  
 Used preprocessors: SCSS  
 
