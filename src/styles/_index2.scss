@@ -1,266 +1,273 @@
 @import "./base";
 @import "./gradients";
-@import "./../../node_modules/swiper/swiper.scss";
-@import "./../../node_modules/swiper/components/effect-flip/effect-flip.scss";
-@import "./../../node_modules/swiper/components/navigation/navigation.scss";
-@import "./../../node_modules/swiper/components/pagination/pagination.scss";
-.index2{
-    @include defaultBoxing;
-    @include basicSizing;
-    position: absolute;
-/*---------GENERAL STYLING---------*/
-    background-color: $backgroundColor;
-    z-index: $pageZ_index;
-    
-    position: absolute;
-    overflow-x: hidden;
-    height: calc(100vh - 90px);
-    top: 90px;
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/components/effect-flip/effect-flip.scss";
+@import "../../node_modules/swiper/components/navigation/navigation.scss";
+@import "../../node_modules/swiper/components/pagination/pagination.scss";
+.index2 {
+  @include defaultBoxing;
+  @include basicSizing;
+  position: absolute;
+  /*---------GENERAL STYLING---------*/
+  background-color: $backgroundColor;
+  z-index: $pageZ_index;
 
-    .content{
-        min-height: calc(100vh - 90px) !important; // important for consisten content size
-        display: grid;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        align-content: center;
+  position: absolute;
+  overflow-x: hidden;
+  height: calc(100vh - 90px);
+  top: 90px;
 
+  .content {
+    min-height: calc(
+      100vh - 90px
+    ) !important; // important for consisten content size
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 
-        .container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            
-            margin-right: 40px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
-        }
-
-        /*PC CARD CONTENT OPTIONS*/
-        .front{
-            cursor: pointer;
-            .numbers{
-                font-family: $font;
-                font-size: 40px;
-                font-weight: $medium;
-                position: absolute;
-                left: 10%;
-                top: 5%;
-            }
-            .cardImg{
-                position:absolute;
-                left: 50%;
-                top: 50%;
-                object-fit: contain;
-                width: 60%;
-                transform: translate(-50%,-50%);
-                
-            }
-        }
-        .back{
-            cursor: pointer;
-            div{
-                color: white;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-                width: 80%;
-                text-align: center;
-                font-family: $font;
-                font-weight: $regular;
-                font-size: 20px;
-
-            }
-        }
+      margin-right: 40px;
     }
 
-    //gradient styles
-    #gradient5{
-        position:absolute;
-        width: 600px;
-        height: 600px;
-        z-index: -1;
-        left: 25%;
+    /*PC CARD CONTENT OPTIONS*/
+    .front {
+      cursor: pointer;
+      .numbers {
+        font-family: $font;
+        font-size: 40px;
+        font-weight: $medium;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+      }
+      .cardImg {
+        position: absolute;
+        left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        object-fit: contain;
+        width: 60%;
+        transform: translate(-50%, -50%);
+      }
     }
-    #gradient6{
+    .back {
+      cursor: pointer;
+      div {
+        color: white;
         position: absolute;
-        z-index: -1;
-        bottom: 2%;
-        right: -5%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+        font-family: $font;
+        font-weight: $regular;
+        font-size: 20px;
+      }
     }
-    #gradient7{
-        position: absolute;
-        z-index: -1;
-        top: 2%;
-        right: 20%;
-        background: linear-gradient(0deg, $gradientC1, $gradientC2);
+  }
+
+  //gradient styles
+  #gradient5 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    z-index: -1;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #gradient6 {
+    position: absolute;
+    z-index: -1;
+    bottom: 2%;
+    right: -5%;
+  }
+  #gradient7 {
+    position: absolute;
+    z-index: -1;
+    top: 2%;
+    right: 20%;
+    background: linear-gradient(0deg, $gradientC1, $gradientC2);
+  }
+  #gradient8 {
+    position: absolute;
+    z-index: -1;
+    bottom: 20%;
+    left: 60%;
+  }
+  #gradient9 {
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    top: 3%;
+  }
+  /*--------------------------------*/
+  /*-------------PC styling-------------*/
+  @media (min-width: 1101px) {
+    .headerWrapperIp {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      width: 100%;
+
+      h1 {
+        margin: 0px;
+        margin-top: 15px;
+        font-family: $font;
+        font-weight: $medium;
+        font-size: 45px;
+      }
+      #underliner2 {
+        width: 70%;
+        height: 3px;
+        border-radius: 50%;
+        margin: 5px 10px 40px 0px;
+        background-color: black;
+      }
     }
-    #gradient8{
-        position: absolute;
-        z-index: -1;
-        bottom: 20%;
-        left: 60%;
-
+    #ip_button_wrapper {
+      margin: 40px 0px;
+      margin-right: 35px;
     }
-    #gradient9{
-        position: absolute;
-        z-index: -1;
-        left: -10px;
-        top: 3%;
+
+    //device
+    .mob {
+      display: none;
     }
-/*--------------------------------*/
-/*-------------PC styling-------------*/
-    @media (min-width:1101px){
-
-        .headerWrapperIp{
-            display:grid;
-            justify-content: center;
-            justify-items: center;
-            width: 100%;
-
-            h1{
-                margin: 0px;
-                margin-top: 15px;
-                font-family: $font;
-                font-weight: $medium;
-                font-size: 45px;
-            }
-            #underliner2{
-                width: 70%;
-                height: 3px;
-                border-radius: 50%;
-                margin: 5px 10px 40px 0px;
-                background-color: black;
-            }
-        }
-        #ip_button_wrapper{
-            margin: 40px 0px;
-            margin-right: 35px;
-        }
-
-        //device
-        .mob{display: none;}
+  }
+  /*------------------------------------*/
+  /*-----------MOB styling----------*/
+  @media (max-width: 1100px) {
+    //hide pc style
+    .pc {
+      display: none;
     }
-/*------------------------------------*/
-/*-----------MOB styling----------*/
-    @media (max-width:1100px){
-        //hide pc style
-        .pc{display:none;}
-        //swipe styling
-        .mySwiper{
-            height: 420px;
-        }
-        .headerWrapperIp{
-            h1{
-                font-family: $font;
-                font-weight: $medium;
-                font-size: 40px;
-                width: 100%;
-                font-family: $font;
-                text-align: center;
-                margin: 0px;
-            }
-            #underliner2{
-                width: 60%;
-                height: 3px;
-                border-radius: 50%;
-                margin:5px auto;
-                margin-bottom: 20px;
-                background-color: black;
-
-            }
-        }
-
-        #ip_button_wrapper{
-            height: 70px;
-            width: 250px;
-            margin-top: 20px;
-
-            #button2{
-                margin: 0px 0px;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-            }
-        }
-
-        //gradients
-        #gradient8{display:none;}
-        
-        @media (max-width: 850px) and (min-width:401px){
-            #gradient5{
-                display: none;
-            }
-            #gradient6{
-                left: 5%;
-            }
-            #gradient7{
-                right: 10%;
-                top: 20%;
-            }
-            #gradient9{
-                left: 10%;
-                top: 10%;
-            }
-        }
+    //swipe styling
+    .mySwiper {
+      height: 420px;
     }
-    @media (max-width:400px){
-        //hide pc style
-        .pc{display:none;}
-        //swipe styling
-        .headerWrapperIp{
-            margin-top: 30px;
-            h1{
-                font-family: $font;
-                font-weight: $medium;
-                font-size: 30px;
-                width: 100%;
-                text-align: center;
-                margin: 0px;
-            }
-            #underliner2{
-                width: 60%;
-                height: 3px;
-                border-radius: 50%;
-                margin:5px auto;
-                margin-bottom: 20px;
-                background-color: black;
-
-            }
-        }
-        .mySwiper{
-            width: 300px;
-            height: 350px;
-            .swiper-slide{
-                width: 300px; 
-                height: 300px;
-    
-                .mobCard{
-                    width: 300px !important; 
-                    height: 300px !important;
-                    
-                    .cardNumber{
-                        font-size: 25px;
-                    }
-                    .cardContent{
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-
-        //gradients
-        #gradient6{display:none;}
-        #gradient7{display:none;}
-        #gradient9{display:none;}
-        #gradient5{
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
+    .headerWrapperIp {
+      h1 {
+        font-family: $font;
+        font-weight: $medium;
+        font-size: 40px;
+        width: 100%;
+        font-family: $font;
+        text-align: center;
+        margin: 0px;
+      }
+      #underliner2 {
+        width: 60%;
+        height: 3px;
+        border-radius: 50%;
+        margin: 5px auto;
+        margin-bottom: 20px;
+        background-color: black;
+      }
     }
-/*------------------------------------*/
 
+    #ip_button_wrapper {
+      height: 70px;
+      width: 250px;
+      margin-top: 20px;
+
+      #button2 {
+        margin: 0px 0px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    //gradients
+    #gradient8 {
+      display: none;
+    }
+
+    @media (max-width: 850px) and (min-width: 401px) {
+      #gradient5 {
+        display: none;
+      }
+      #gradient6 {
+        left: 5%;
+      }
+      #gradient7 {
+        right: 10%;
+        top: 20%;
+      }
+      #gradient9 {
+        left: 10%;
+        top: 10%;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    //hide pc style
+    .pc {
+      display: none;
+    }
+    //swipe styling
+    .headerWrapperIp {
+      margin-top: 30px;
+      h1 {
+        font-family: $font;
+        font-weight: $medium;
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+      }
+      #underliner2 {
+        width: 60%;
+        height: 3px;
+        border-radius: 50%;
+        margin: 5px auto;
+        margin-bottom: 20px;
+        background-color: black;
+      }
+    }
+    .mySwiper {
+      width: 300px;
+      height: 350px;
+      .swiper-slide {
+        width: 300px;
+        height: 300px;
+
+        .mobCard {
+          width: 300px !important;
+          height: 300px !important;
+
+          .cardNumber {
+            font-size: 25px;
+          }
+          .cardContent {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    //gradients
+    #gradient6 {
+      display: none;
+    }
+    #gradient7 {
+      display: none;
+    }
+    #gradient9 {
+      display: none;
+    }
+    #gradient5 {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  /*------------------------------------*/
 }

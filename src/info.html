@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>EasyToDance</title>
+  </head>
+  <div data-barba="wrapper" class="page-wrapper">
+    <!--Unhanging content -->
+
+    <!-- --------------------MENU-------------------- -->
+    <div class="menu_wrapper" id="menu_wrapper">
+      <!-- logo -->
+      <img src="./pictures/Logo-ETD.png" alt="logo" class="logo" />
+
+      <!-- nav PC -->
+      <nav class="menu" role="navigation">
+        <a class="menuOption" id="option1" href="index.html">Hlavní stránka</a>
+        <a class="menuOption" id="option2" href="references.html">Reference</a>
+        <a class="menuOption" id="option3" href="aboutus.html">O mě</a>
+        <a class="menuOption" id="option4" href="contact.html">Kontakt</a>
+      </nav>
+      <div class="dotWrapper">
+        <a href="index.html"
+          ><div class="dot"><div id="1"></div></div
+        ></a>
+        <a href="info.html"
+          ><div class="dot"><div id="2"></div></div
+        ></a>
+        <a href="offer.html"
+          ><div class="dot"><div id="3"></div></div
+        ></a>
+      </div>
+      <!-- nav MOBILE -->
+      <nav role="navigation" class="hamburgerMenu mob">
+        <div class="toggleMenu">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul class="hamburgerMobOpt">
+            <a id="1hmb" href="index.html"><li>Hlavní stránka</li></a>
+            <a id="2hmb" href="references.html"><li>Reference</li></a>
+            <a id="3hmb" href="aboutus.html"><li>O mě</li></a>
+            <a id="4hmb" href="contact.html"><li>Kontakt</li></a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- nav Footer Button -->
+    <div class="navMobile_wrapper">
+      <a id="up">
+        <div id="line1" class="line"></div>
+        <div id="line2" class="line"></div>
+      </a>
+      <a id="down">
+        <div id="line3" class="line"></div>
+        <div id="line4" class="line"></div>
+      </a>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <main data-barba="container" class="index2" data-barba-namespace="info">
+      <!--Changing content -->
+      <div class="content">
+        <!-- PC content start -->
+        <div class="container">
+          <div class="headerWrapperIp pc">
+            <h1>Jak začít?</h1>
+            <div id="underliner2" class="pc"></div>
+          </div>
+          <section id="card1" class="card pc">
+            <div class="card_wrapper">
+              <figure class="front">
+                <div class="numbers">1.</div>
+                <img
+                  src="./pictures/icon1.svg"
+                  id="icon1"
+                  class="cardImg"
+                  alt="send"
+                />
+              </figure>
+              <figure class="back">
+                <div>
+                  Vyberte si balíček, který vám vyhovuje.<br />
+                  Nebo nám napište zkrze náš kontaktní formulář a zeptejte se
+                  nás na podrobnější informace.
+                </div>
+              </figure>
+            </div>
+          </section>
+
+          <section id="card2" class="card pc">
+            <div class="card_wrapper">
+              <figure class="front">
+                <div class="numbers">2.</div>
+                <img
+                  src="./pictures/icon2.svg"
+                  id="icon2"
+                  class="cardImg"
+                  alt="plan"
+                />
+              </figure>
+              <figure class="back">
+                <div>
+                  Domluvíme se na místě konání!<br />
+                  Zda si přejete lekci v prostředí soukromého sálu, nebo
+                  sdílených prostorech.
+                </div>
+              </figure>
+            </div>
+          </section>
+
+          <section id="card3" class="card pc">
+            <div class="card_wrapper">
+              <figure class="front">
+                <div class="numbers">3.</div>
+                <img
+                  src="./pictures/icon3.svg"
+                  id="icon3"
+                  class="cardImg"
+                  alt="dance"
+                />
+              </figure>
+              <figure class="back">
+                <div>
+                  Pustíme se do toho!<br />
+                  Domluvíme se na harmonogramu a obsahu lekcí.<br />
+                  Užijete si tanec na maximum!
+                </div>
+              </figure>
+            </div>
+          </section>
+        </div>
+        <!-- PC content end -->
+        <!-- Mobile content start SWIPER -->
+        <div class="headerWrapperIp mob">
+          <h1>Jak začít?</h1>
+          <div id="underliner2"></div>
+        </div>
+        <div class="swiper-container mySwiper mob">
+          <div class="swiper-wrapper">
+            <!-- Slides-->
+            <div class="swiper-slide">
+              <div class="mobCard">
+                <div class="cardContentMob">
+                  <div class="cardNumber">1.</div>
+                  <div class="cardContent">
+                    Vyberte si balíček, který vám vyhovuje.<br />
+                    Nebo nám napište zkrze náš kontaktní formulář a zeptejte se
+                    nás na podrobnější informace.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobCard">
+                <div class="cardContentMob">
+                  <div class="cardNumber">2.</div>
+                  <div class="cardContent">
+                    Domluvíme se na místě konání!<br />
+                    Zda si přejete lekci v prostředí soukromého sálu, nebo
+                    sdílených prostorech.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobCard">
+                <div class="cardContentMob">
+                  <div class="cardNumber">3.</div>
+                  <div class="cardContent">
+                    Pustíme se do toho!<br />
+                    Domluvíme se na harmonogramu a obsahu lekcí.<br />
+                    Užijete si tanec na maximum!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- Mobile content end SWIPER-->
+        <!-- Univerzal content -->
+        <div id="ip_button_wrapper">
+          <div class="button" id="button2">
+            <p>JDU DO TOHO</p>
+            <div class="button_filler"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Gradients -->
+      <div class="gradient1" id="gradient5"></div>
+      <div class="gradient2" id="gradient6"></div>
+      <div class="gradient3" id="gradient7"></div>
+      <div class="gradient4" id="gradient8"></div>
+      <div class="gradient5" id="gradient9"></div>
+      <!--Javascript -->
+      <script type="module" src="./scripts/index.js"></script>
+    </main>
+  </div>
+  <script type="module" src="./scripts/index.js"></script>
+</html>

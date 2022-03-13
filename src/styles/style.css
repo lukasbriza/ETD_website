@@ -1927,7 +1927,7 @@ button.swiper-pagination-bullet {
 }
 
 .index2 .content {
-  min-height: calc(100vh - 90px) !important;
+  min-height: calc( 100vh - 90px) !important;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -2872,7 +2872,7 @@ button.swiper-pagination-bullet {
     margin-right: 20px;
   }
   .index3 .pp_card_wrapper .price {
-    background: #FFFFFF;
+    background: #ffffff;
     font-family: Poppins, sans-serif;
     display: block;
     width: 400px;
@@ -2894,7 +2894,8 @@ button.swiper-pagination-bullet {
     margin: 0px;
     margin-top: 20px;
   }
-  .index3 .pp_card_wrapper .price .cardInnerContent #underliner3, .index3 .pp_card_wrapper .price .cardInnerContent #underliner4 {
+  .index3 .pp_card_wrapper .price .cardInnerContent #underliner3,
+  .index3 .pp_card_wrapper .price .cardInnerContent #underliner4 {
     width: 40%;
     height: 3px;
     border-radius: 50%;
@@ -2922,7 +2923,10 @@ button.swiper-pagination-bullet {
     content: "-";
     padding-right: 10px;
   }
-  .index3 .pp_card_wrapper .price .cardInnerContent #button3, .index3 .pp_card_wrapper .price .cardInnerContent #button4, .index3 .pp_card_wrapper .price .cardInnerContent #button3s, .index3 .pp_card_wrapper .price .cardInnerContent #button4s {
+  .index3 .pp_card_wrapper .price .cardInnerContent #button3,
+  .index3 .pp_card_wrapper .price .cardInnerContent #button4,
+  .index3 .pp_card_wrapper .price .cardInnerContent #button3s,
+  .index3 .pp_card_wrapper .price .cardInnerContent #button4s {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -2974,7 +2978,8 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1010px) and (min-width: 501px) {
-  .index3 #price1, .index3 #price2 {
+  .index3 #price1,
+  .index3 #price2 {
     display: none;
   }
   .index3 .content .mySwiper2 {
@@ -2998,7 +3003,7 @@ button.swiper-pagination-bullet {
     width: 400px;
     height: 400px;
     margin: 0px;
-    background: #FFFFFF;
+    background: #ffffff;
     -webkit-box-shadow: 4px 4px 8px 2px #2e2e2ea8;
             box-shadow: 4px 4px 8px 2px #2e2e2ea8;
     text-align: center;
@@ -3017,7 +3022,8 @@ button.swiper-pagination-bullet {
     margin: 0px;
     margin-top: 20px;
   }
-  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner3, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner4 {
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner3,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner4 {
     width: 40%;
     height: 3px;
     border-radius: 50%;
@@ -3046,7 +3052,10 @@ button.swiper-pagination-bullet {
     content: "-";
     padding-right: 10px;
   }
-  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3s, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4s {
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3s,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4s {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -3103,7 +3112,7 @@ button.swiper-pagination-bullet {
     width: 350px;
     height: 400px;
     margin: 0px;
-    background: #FFFFFF;
+    background: #ffffff;
     -webkit-box-shadow: 4px 4px 8px 2px #2e2e2ea8;
             box-shadow: 4px 4px 8px 2px #2e2e2ea8;
     text-align: center;
@@ -3122,7 +3131,8 @@ button.swiper-pagination-bullet {
     margin: 0px;
     margin-top: 20px;
   }
-  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner3, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner4 {
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner3,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #underliner4 {
     width: 35%;
     height: 3px;
     border-radius: 50%;
@@ -3151,7 +3161,10 @@ button.swiper-pagination-bullet {
     content: "-";
     padding-right: 10px;
   }
-  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3s, .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4s {
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button3s,
+  .index3 .content .mySwiper2 .swiper-slide .priceSwiper .cardInnerContent #button4s {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
